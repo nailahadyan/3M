@@ -1,0 +1,124 @@
+.main {
+  background-image: url('HTML/img/gedung utama 2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 100%;
+  height: 736px; 
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 2.486;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  max-width: 80%;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 2;
+}
+
+#prevBtn, #nextBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    height: 100vh; /* Menyesuaikan tinggi slider untuk layar kecil */
+  }
+  
+  /* Menyesuaikan ukuran tombol */
+  #prevBtn, #nextBtn {
+    font-size: 1.5rem;
+  }
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  display: inline-block;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
