@@ -1,5 +1,5 @@
 .main {
-  background-image: url('HTML/img/gedung utama 2.jpg');
+  background-image: url('img/gedung utama 2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -121,4 +121,200 @@ button {
 
 .slider-nav a:hover {
   opacity: 1;
+}
+
+/* Container utama */
+#news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  border-bottom: 1px solid #ddd;
+  background-image: url('img/luas pabrik r3 r3 copy.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative; 
+  width: 100%;
+}
+
+/* Header */
+.news-heading {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.news-heading h3 {
+  font-size: 2.4rem;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Container berita */
+.news-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+/* Box berita */
+.news-box {
+  width: 350px;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+  flex-direction: column; /* Mengatur elemen dalam news-box secara vertikal */
+  justify-content: space-between; /* Membuat teks di atas dan tombol di bawah */
+  padding-bottom: 15px; /* Tambahkan sedikit padding bawah */
+}
+
+.news-box:hover {
+  transform: scale(1.05);
+}
+
+/* Gambar berita */
+.news-img {
+  width: 100%;
+  height: 200px; 
+  overflow: hidden;
+}
+
+.news-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-img img:hover {
+  transform: scale(1.1);
+}
+
+/* Teks berita */
+.news-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-text span {
+  color: #44bdbd;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.news-text .news-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
+.news-text .news-title:hover {
+  color: grey;
+  transition: all ease 0.3s;
+}
+
+/* Deskripsi berita */
+.news-text p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  margin: 15px 0px;
+}
+
+/* Tombol read more */
+.news-text a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.news-text a:hover {
+  color: #8fffff;
+  transition: all ease 0.3s;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: auto; 
+  padding: 10px; 
+}
+
+.read-more-btn {
+  background-color: #44bdbd;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out; /
+}
+
+.read-more-btn:hover {
+  background-color: #8fffff;
+}
+
+/* Container untuk tombol More News */
+.more-news-container {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000; 
+}
+
+/* Tombol More News */
+.more-news-btn {
+  background-color: #44bdbd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Hapus underline pada link */
+.more-news-container a {
+  text-decoration: none;
+}
+
+/* Tanda panah */
+.arrow {
+  margin-left: 8px; 
+  font-size: 18px;
+}
+
+/* Efek hover tombol */
+.more-news-btn:hover {
+  background-color: #8fffff;
+}
+
+/* Tampilan saat tombol diklik */
+.more-news-btn:active {
+  transform: scale(0.98);
 }
